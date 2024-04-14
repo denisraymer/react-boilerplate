@@ -1,0 +1,5 @@
+.idea
+.husky
+dist
+node_modules
+package.json

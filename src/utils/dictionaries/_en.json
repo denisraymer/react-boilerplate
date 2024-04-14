@@ -1,0 +1,17 @@
+{
+  "language": "EN",
+
+  "ui": {
+    "navigation": {}
+  },
+
+  "home": {
+    "footer": {
+      "copyright": "©"
+    }
+  },
+
+  "notFound": {
+    "title": "Page not found 404"
+  }
+}

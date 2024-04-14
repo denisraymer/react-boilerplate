@@ -1,0 +1,17 @@
+{
+  "language": "RU",
+
+  "ui": {
+    "navigation": {}
+  },
+
+  "home": {
+    "footer": {
+      "copyright": "©"
+    }
+  },
+
+  "notFound": {
+    "title": "Страница не найдена 404"
+  }
+}
