@@ -1,0 +1,13 @@
+import { IconGallery, IconItem, Meta } from "@storybook/blocks"
+
+import * as icons from "../components/icons"
+
+<Meta title="icons" />
+
+<IconGallery>
+  {Object.entries(icons).filter(([name]) => name !== "iconList").map(([name, Icon]) =>(
+    <IconItem name={name}>
+      <Icon/>
+    </IconItem>
+  ))}
+</IconGallery>
