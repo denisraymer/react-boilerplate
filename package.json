@@ -9,9 +9,7 @@
     "build": "tsc && vite build",
     "build:sb": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "precommit": "lint-staged",
-    "prepare": "husky install"
+    "test": "echo test"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -49,14 +47,12 @@
     "vite": "^5.2.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "prettier . --write",
-      "eslint --fix"
-    ]
+    "*.{ts,tsx}": ["yarn run lint", "yarn test", "git add"]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn precommit"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run test"
     }
   }
 }
