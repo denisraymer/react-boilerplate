@@ -8,6 +8,7 @@
     "dev:sb": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "build:sb": "storybook build",
+    "formatting": "yarn prettier . --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "test": "echo test"
   },
@@ -48,8 +49,8 @@
   },
   "lint-staged": {
     "*.{js, ts,tsx}": [
-      "yarn prettier . --write",
-      "yarn run lint",
+      "yarn formatting",
+      "yarn lint",
       "yarn test",
       "git add"
     ]

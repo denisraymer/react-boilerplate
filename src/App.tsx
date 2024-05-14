@@ -4,9 +4,10 @@ import { StyleProvider } from "./styles/StyleProvider/StyleProvider.tsx"
 
 function App() {
   return (
-    <StyleProvider>                   <LocalizationContextProvider>
+    <StyleProvider>
+                    <LocalizationContextProvider>
         <AppRouter />
-                              </LocalizationContextProvider>
+      </LocalizationContextProvider>
     </StyleProvider>
   )
 }
