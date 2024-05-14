@@ -1,4 +1,4 @@
-import { useLocalizationContext } from "../../context/_LocalizationContext.tsx"
+import { useLocalizationContext } from "../../context/localization/_LocalizationContext.tsx"
 import { TFCReturn } from "@/types/_common.types.ts"
 
 export default function Page404(): TFCReturn {

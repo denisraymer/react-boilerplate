@@ -1,12 +1,8 @@
-import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from "react"
+import React, { useEffect, useMemo, useRef, useState } from "react"
 
 import { EN, RU } from "../utils/dictionaries"
 import { ELang, ILocale } from "../types/_localization.types.ts"
-
-interface ILocalizationContextValue {
-  l: ILocale
-  setLocale: React.Dispatch<React.SetStateAction<ELang>>
-}
+import { LocalizationContext, ILocalizationContextValue } from "./_useLocalizationContext.ts"
 
 interface ILocalizationContextProvider {
   children: React.ReactNode
@@ -16,11 +12,6 @@ const languages = {
   [ELang.RU]: RU,
   [ELang.EN]: EN,
 }
-
-const LocalizationContext = createContext({} as ILocalizationContextValue)
-
-export const useLocalizationContext = (): ILocalizationContextValue =>
-  useContext(LocalizationContext)
 
 export const LocalizationContextProvider: React.FC<ILocalizationContextProvider> = ({
   children,
