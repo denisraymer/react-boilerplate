@@ -1,1 +1,3 @@
-npm test
+"yarn formatting",
+"yarn lint",
+"yarn test",
