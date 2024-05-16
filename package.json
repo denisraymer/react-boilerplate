@@ -10,7 +10,8 @@
     "build:sb": "storybook build",
     "formatting": "yarn prettier . --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "test": "echo test"
+    "test": "echo test",
+    "prepare": "husky"
   },
   "dependencies": {
     "react": "^18.2.0",
