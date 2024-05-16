@@ -47,19 +47,5 @@
     "styled-components": "^6.1.8",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  },
-  "lint-staged": {
-    "*.{js, ts,tsx}": [
-      "yarn formatting",
-      "yarn lint",
-      "yarn test",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run test"
-    }
   }
 }
