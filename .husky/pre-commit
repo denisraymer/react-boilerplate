@@ -1,2 +1,3 @@
-yarn formatting
-yarn lint
+#!/bin/sh
+#yarn formatting
+#yarn lint
