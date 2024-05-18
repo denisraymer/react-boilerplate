@@ -1,0 +1,2 @@
+#!/bin/sh
+yarn commitlint ${1}

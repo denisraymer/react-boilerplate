@@ -8,10 +8,11 @@
     "dev:sb": "storybook dev -p 6006",
     "build": "tsc && vite build",
     "build:sb": "storybook build",
+    "formatting": "yarn prettier . --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "precommit": "lint-staged",
-    "prepare": "husky install"
+    "test": "echo test",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.3.2",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@storybook/addon-essentials": "^8.0.8",
     "@storybook/addon-interactions": "^8.0.8",
     "@storybook/addon-links": "^8.0.8",
@@ -47,16 +50,5 @@
     "styled-components": "^6.1.8",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "prettier . --write",
-      "eslint --fix"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn precommit"
-    }
   }
 }
